@@ -1,18 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useParams,
-} from "react-router-dom";
+
 import "./App.css";
-import Paper from "./TestPaper/Paper";
-import UserForm from "./UserForm/UserForm";
-import ComponentA from "./Context/ComponentA";
-import StopTimer from "./StopTimer/StopTimer";
-import StudentDashboard from "./StudentDashboard/StudentDashboard";
-import Links from "./Link/Links";
 function App() {
   const [col, setCol] = useState(0);
   const [row, setRow] = useState(0);
