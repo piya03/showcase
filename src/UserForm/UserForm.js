@@ -6,6 +6,14 @@ const UserForm = () => {
   const [address, bindAddress, resetAddress] = useInput("");
   const [pincode, bindPincode, resetPincode] = useInput("");
 
+  let as_variable_markUp = {
+    __html: "setting this dangerouslyInnerHTML as variable",
+  };
+  function asFun_markUp() {
+    return {
+      __html: "setting dangerouslysetInnerHTML from function",
+    };
+  }
   function onSubmitHandle(e) {
     e.preventDefault();
     alert(`Hello ${FirstName} ${lastName}`);
@@ -17,6 +25,13 @@ const UserForm = () => {
   return (
     <div>
       <form onSubmit={onSubmitHandle}>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: "this text is using dangerouslySetIneerHTML",
+          }}
+        ></div>
+        <div dangerouslySetInnerHTML={as_variable_markUp} />
+        <div dangerouslySetInnerHTML={asFun_markUp()}></div>
         <div>
           <label htmlFor="">First Name</label>
           <input type="text" {...bindFirstName} />

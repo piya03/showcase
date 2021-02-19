@@ -14,6 +14,9 @@ const Links = () => {
       <Link to="/contextAPI">
         <div>Context API</div>
       </Link>
+      <Link to="/stopTimer">
+        <div>Stop Timer</div>
+      </Link>
       <Link to="/student/dashboard">
         <div>Student Dashboard</div>
       </Link>
