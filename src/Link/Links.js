@@ -20,6 +20,15 @@ const Links = () => {
       <Link to="/student/dashboard">
         <div>Student Dashboard</div>
       </Link>
+      <Link to="/generate/row/col">
+        <div>Generate Row Col</div>
+      </Link>
+      <Link to="/watch">
+        <div>Watch</div>
+      </Link>
+      <Link to="/colorbox">
+        <div>Color Box</div>
+      </Link>
     </div>
   );
 };

@@ -1,0 +1,30 @@
+
+  .box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .box div {
+    position: absolute;
+    top: 52px;
+    height: 75px;
+    width: 4px;
+    border-radius: 5px;
+    transform-origin: bottom;
+  }
+  .hour {
+    background: green;
+    top: 63px !important;
+    width: 6px !important;
+    height: 60px !important;
+  }
+  .min {
+    background: red;
+  }
+  .sec {
+    background: gray;
+    width: 2px !important;
+  }
+  

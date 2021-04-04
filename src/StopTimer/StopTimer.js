@@ -11,20 +11,20 @@ const StopTimer = () => {
     }, 1000);
   }
   function stopTimerFun() {
-    console.log("stopTimer -> stopTimer", stopTimerFun);
+    console.log("stopTimer -> stopTimer");
 
     clearInterval(myInterval);
   }
-  // useEffect(() => {
-  //   let myInterval = setInterval(() => {
-  //     setCount((prev) => prev + 1);
-  //   }, 1000);
 
-  //   return () => {
-  //     console.log("clean up");
-  //     clearInterval(myInterval);
-  //   };
-  // }, [count]);
+  useEffect(() => {
+    if (count > 0) {
+      startTimer();
+    }
+    return () => {
+      console.log("clear me");
+      clearInterval(myInterval);
+    };
+  }, [count]);
   return (
     <div>
       <p>Timer {count} </p>

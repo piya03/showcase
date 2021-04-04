@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ServerData } from "./ServerData";
 const StudentDashboard = () => {
   const [data, setData] = useState(ServerData);
+
   useEffect(() => {
     setData(
       data.map((each) => {
@@ -42,6 +43,10 @@ const StudentDashboard = () => {
         <tbody>
           {data &&
             data.map((each) => {
+              console.log(
+                "🚀 ~ file: StudentDashboard.js ~ line 46 ~ data.map ~ each",
+                each
+              );
               return (
                 <tr key={each.rollNo}>
                   <input
@@ -49,7 +54,13 @@ const StudentDashboard = () => {
                       let checked = e.target.checked;
                       setData(
                         data.map((indata) => {
+                          console.log("indata", indata);
                           if (indata.rollNo === each.rollNo) {
+                            console.log("🚀 each rrr", each);
+                            console.log(
+                              "🚀 ~ file: StudentDashboard.js ~ line 59 ~ data.map ~ indata.rollNo",
+                              indata.rollNo
+                            );
                             indata.selectedPerson = checked;
                           }
                           return indata;
